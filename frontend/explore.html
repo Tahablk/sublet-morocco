@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <title>Explorer les logements — Sublet Morocco</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body>
+  <!-- Topbar -->
+  <header class="topbar">
+    <div class="container topbar__inner">
+      <a class="brand" href="index.html">
+        <span class="brand__mark">SM</span>
+        <span class="brand__name">Sublet Morocco</span>
+      </a>
+
+      <nav class="nav">
+        <a class="nav__link" href="explore.html">Explorer</a>
+        <a class="nav__link" href="host.html">Espace hôte</a>
+        <a class="nav__link" href="login.html">Connexion</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="explore">
+    <div class="container explore__grid">
+
+      <!-- Filters -->
+      <aside class="filters">
+        <h3 class="filters__title">Filtres</h3>
+
+        <label class="field">
+          <span>Ville</span>
+          <select>
+            <option>Marrakech</option>
+            <option>Casablanca</option>
+            <option>Rabat</option>
+            <option>Tanger</option>
+          </select>
+        </label>
+
+        <label class="field">
+          <span>Durée</span>
+          <select>
+            <option>Nuit</option>
+            <option>Semaine</option>
+            <option>Mois</option>
+          </select>
+        </label>
+
+        <label class="field">
+          <span>Prix max (€)</span>
+          <input type="number" placeholder="100" />
+        </label>
+      </aside>
+
+      <!-- Listings -->
+      <section class="listings">
+        <article class="listing active">
+          <div class="listing__img"></div>
+          <div class="listing__body">
+            <div class="listing__title">Riad calme au centre</div>
+            <div class="listing__meta">Marrakech · Semaine</div>
+            <div class="listing__price">€65 / nuit</div>
+          </div>
+        </article>
+
+        <article class="listing">
+          <div class="listing__img"></div>
+          <div class="listing__body">
+            <div class="listing__title">Appartement vue mer</div>
+            <div class="listing__meta">Casablanca · Mois</div>
+            <div class="listing__price">€900 / mois</div>
+          </div>
+        </article>
+
+        <article class="listing">
+          <div class="listing__img"></div>
+          <div class="listing__body">
+            <div class="listing__title">Studio moderne</div>
+            <div class="listing__meta">Rabat · Nuit</div>
+            <div class="listing__price">€45 / nuit</div>
+          </div>
+        </article>
+      </section>
+
+      <!-- Map -->
+      <aside class="map">
+        <div class="map__placeholder">
+          Carte des logements
+        </div>
+      </aside>
+
+    </div>
+  </main>
+
+</body>
+</html>
