@@ -1,38 +1,30 @@
 <!doctype html>
-<html lang="fr" data-lang="fr">
+<html lang="fr">
 <head>
   <meta charset="utf-8" />
+  <title>Atlas Stay — Premium short stays in Morocco</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Sublet Morocco — Séjours premium, simples et fiables</title>
-  <meta name="description" content="Sublet Morocco — séjours courte durée au Maroc. Clair, premium, fiable. Explorez des logements ou proposez le vôtre." />
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 
 <body>
-  <!-- Top bar -->
+  <!-- Header -->
   <header class="topbar">
     <div class="container topbar__inner">
-      <a class="brand" href="index.html" aria-label="Sublet Morocco">
-        <span class="brand__mark">SM</span>
-        <span class="brand__name">Sublet Morocco</span>
+      <a class="brand" href="index.html">
+        <span class="brand__mark">AS</span>
+        <span class="brand__name">Atlas Stay</span>
       </a>
 
       <nav class="nav">
-        <a class="nav__link" href="explore.html" data-i18n="nav.explore">Explorer</a>
-        <a class="nav__link" href="host.html" data-i18n="nav.host">Espace hôte</a>
-        <a class="nav__link" href="login.html" data-i18n="nav.login">Connexion</a>
+        <a class="nav__link" href="explore.html">Explorer</a>
+        <a class="nav__link" href="host.html">Espace hôte</a>
+        <a class="nav__link" href="login.html">Connexion</a>
 
         <div class="lang">
-          <button class="lang__btn" type="button" id="langButton" aria-haspopup="listbox" aria-expanded="false">
-            <span class="lang__label" id="langLabel">FR</span>
-            <span class="lang__chev" aria-hidden="true">▾</span>
+          <button class="lang__btn" type="button">
+            FR ▾
           </button>
-
-          <div class="lang__menu" id="langMenu" role="listbox" aria-label="Language">
-            <button class="lang__item" type="button" role="option" data-lang="fr">Français (FR)</button>
-            <button class="lang__item" type="button" role="option" data-lang="en">English (EN)</button>
-            <button class="lang__item" type="button" role="option" data-lang="ar">العربية (AR)</button>
-          </div>
         </div>
       </nav>
     </div>
@@ -43,21 +35,23 @@
     <section class="hero">
       <div class="container hero__grid">
         <div class="hero__copy">
-          <p class="eyebrow" data-i18n="home.eyebrow">Séjours courte durée au Maroc</p>
+          <p class="eyebrow">Séjours courte durée au Maroc</p>
 
-          <h1 class="hero__title" data-i18n="home.title">
+          <h1 class="hero__title">
             Une expérience premium, simple et fiable.
           </h1>
 
-          <p class="hero__subtitle" data-i18n="home.subtitle">
-            Des logements sélectionnés, une information claire, et des hôtes accessibles — sans complexité.
+          <p class="hero__subtitle">
+            Des logements sélectionnés, une information claire,
+            et des hôtes accessibles — sans complexité.
           </p>
 
           <div class="hero__actions">
-            <a class="btn btn--primary" href="explore.html" data-i18n="home.ctaExplore">
+            <!-- IMPORTANT: .html -->
+            <a class="btn btn--primary" href="explore.html">
               Explorer les logements
             </a>
-            <a class="btn btn--ghost" href="host.html" data-i18n="home.ctaHost">
+            <a class="btn btn--ghost" href="host.html">
               Proposer un logement
             </a>
           </div>
@@ -65,115 +59,60 @@
           <div class="hero__trust">
             <div class="trust">
               <div class="trust__item">
-                <div class="trust__icon" aria-hidden="true">✓</div>
+                <div class="trust__icon">✓</div>
                 <div>
-                  <div class="trust__title" data-i18n="home.trust1.title">Prix & durée visibles</div>
-                  <div class="trust__text" data-i18n="home.trust1.text">Toujours clairs, dès la recherche.</div>
+                  <div class="trust__title">Prix & durée visibles</div>
+                  <div class="trust__text">Toujours clairs, dès la recherche.</div>
                 </div>
               </div>
 
               <div class="trust__item">
-                <div class="trust__icon" aria-hidden="true">🗺</div>
+                <div class="trust__icon">🗺</div>
                 <div>
-                  <div class="trust__title" data-i18n="home.trust2.title">Localisation transparente</div>
-                  <div class="trust__text" data-i18n="home.trust2.text">Carte et quartiers, sans surprise.</div>
+                  <div class="trust__title">Localisation transparente</div>
+                  <div class="trust__text">Carte et quartiers, sans surprise.</div>
                 </div>
               </div>
 
               <div class="trust__item">
-                <div class="trust__icon" aria-hidden="true">💬</div>
+                <div class="trust__icon">💬</div>
                 <div>
-                  <div class="trust__title" data-i18n="home.trust3.title">Contact direct</div>
-                  <div class="trust__text" data-i18n="home.trust3.text">Chat simple, uniquement si besoin.</div>
+                  <div class="trust__title">Contact direct</div>
+                  <div class="trust__text">Chat simple, uniquement si besoin.</div>
                 </div>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- Hero visual (image-first value) -->
-        <div class="hero__visual" aria-label="Aperçu des logements">
+        <!-- Visual -->
+        <div class="hero__visual">
           <div class="visual">
-            <div class="visual__img" role="img" aria-label="Intérieur premium au Maroc"></div>
+            <div class="visual__img"></div>
 
             <div class="visual__card">
               <div class="cardline">
-                <span class="pill" data-i18n="home.sample.city">Marrakech</span>
-                <span class="muted" data-i18n="home.sample.duration">Semaine</span>
+                <span class="pill">Marrakech</span>
+                <span class="muted">Semaine</span>
               </div>
-              <div class="cardtitle" data-i18n="home.sample.title">Riad calme, terrasse & lumière</div>
+
+              <div class="cardtitle">
+                Riad calme, terrasse & lumière
+              </div>
+
               <div class="cardline">
                 <span class="price">€65</span>
-                <span class="muted" data-i18n="home.sample.per">/ nuit</span>
+                <span class="muted">/ nuit</span>
               </div>
-              <a class="link" href="explore.html" data-i18n="home.sample.link">Voir des logements similaires</a>
+
+              <a class="link" href="explore.html">
+                Voir des logements similaires
+              </a>
             </div>
           </div>
         </div>
       </div>
     </section>
-
-    <!-- Cities preview (not empty, not overloaded) -->
-    <section class="section">
-      <div class="container">
-        <div class="section__head">
-          <h2 class="section__title" data-i18n="home.cities.title">Villes populaires</h2>
-          <p class="section__desc" data-i18n="home.cities.desc">Choisissez une destination, puis filtrez par budget et durée.</p>
-        </div>
-
-        <div class="citygrid">
-          <a class="city" href="explore.html?city=Marrakech">
-            <div class="city__thumb city__thumb--marrakech" aria-hidden="true"></div>
-            <div class="city__meta">
-              <div class="city__name">Marrakech</div>
-              <div class="city__hint" data-i18n="home.cities.hint">Riad • centre • calme</div>
-            </div>
-          </a>
-
-          <a class="city" href="explore.html?city=Casablanca">
-            <div class="city__thumb city__thumb--casa" aria-hidden="true"></div>
-            <div class="city__meta">
-              <div class="city__name">Casablanca</div>
-              <div class="city__hint" data-i18n="home.cities.hint2">Business • mer • confort</div>
-            </div>
-          </a>
-
-          <a class="city" href="explore.html?city=Rabat">
-            <div class="city__thumb city__thumb--rabat" aria-hidden="true"></div>
-            <div class="city__meta">
-              <div class="city__name">Rabat</div>
-              <div class="city__hint" data-i18n="home.cities.hint3">Calme • sûr • premium</div>
-            </div>
-          </a>
-
-          <a class="city" href="explore.html?city=Tanger">
-            <div class="city__thumb city__thumb--tanger" aria-hidden="true"></div>
-            <div class="city__meta">
-              <div class="city__name">Tanger</div>
-              <div class="city__hint" data-i18n="home.cities.hint4">Vue • brise • design</div>
-            </div>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-      <div class="container footer__inner">
-        <div class="footer__left">
-          <div class="footer__brand">Sublet Morocco</div>
-          <div class="footer__muted" data-i18n="footer.tagline">Court séjour, confiance, clarté.</div>
-        </div>
-
-        <div class="footer__right">
-          <a class="footer__link" href="explore.html" data-i18n="footer.explore">Explorer</a>
-          <a class="footer__link" href="host.html" data-i18n="footer.host">Devenir hôte</a>
-          <a class="footer__link" href="login.html" data-i18n="footer.login">Connexion</a>
-        </div>
-      </div>
-    </footer>
   </main>
-
-  <script src="js/app.js"></script>
 </body>
 </html>

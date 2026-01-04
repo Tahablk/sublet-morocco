@@ -1,100 +1,73 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="utf-8" />
-  <title>Explorer les logements — Sublet Morocco</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8" />
+  <title>Explorer — Atlas Stay</title>
+
   <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
 </head>
-
 <body>
-  <!-- Topbar -->
-  <header class="topbar">
-    <div class="container topbar__inner">
-      <a class="brand" href="index.html">
-        <span class="brand__mark">SM</span>
-        <span class="brand__name">Sublet Morocco</span>
-      </a>
 
-      <nav class="nav">
-        <a class="nav__link" href="explore.html">Explorer</a>
-        <a class="nav__link" href="host.html">Espace hôte</a>
-        <a class="nav__link" href="login.html">Connexion</a>
-      </nav>
+<header class="nav">
+  <div class="nav__brand">
+    <div class="logo">AS</div>
+    <span>Atlas Stay</span>
+  </div>
+  <nav>
+    <a href="index.html">Accueil</a>
+    <a href="explore.html" class="active">Explorer</a>
+  </nav>
+</header>
+
+<main class="explore-layout">
+
+  <!-- LEFT FILTERS -->
+  <aside class="card filters">
+    <h3>Filtres</h3>
+
+    <label>Ville</label>
+    <input id="filterCity" placeholder="Casablanca" />
+
+    <label>Nombre de nuits</label>
+    <input id="filterNights" type="number" min="1" />
+
+    <label>Prix total max (€)</label>
+    <input id="filterPrice" type="number" />
+
+    <button class="primary">Appliquer</button>
+  </aside>
+
+  <!-- CENTER RESULTS -->
+  <section class="results" id="results">
+    <!-- JS injects cards -->
+  </section>
+
+  <!-- RIGHT MAP + CHAT -->
+  <aside class="right-panel">
+
+    <div class="card map-card">
+      <h3>Carte</h3>
+      <div id="map"></div>
     </div>
-  </header>
 
-  <main class="explore">
-    <div class="container explore__grid">
-
-      <!-- Filters -->
-      <aside class="filters">
-        <h3 class="filters__title">Filtres</h3>
-
-        <label class="field">
-          <span>Ville</span>
-          <select>
-            <option>Marrakech</option>
-            <option>Casablanca</option>
-            <option>Rabat</option>
-            <option>Tanger</option>
-          </select>
-        </label>
-
-        <label class="field">
-          <span>Durée</span>
-          <select>
-            <option>Nuit</option>
-            <option>Semaine</option>
-            <option>Mois</option>
-          </select>
-        </label>
-
-        <label class="field">
-          <span>Prix max (€)</span>
-          <input type="number" placeholder="100" />
-        </label>
-      </aside>
-
-      <!-- Listings -->
-      <section class="listings">
-        <article class="listing active">
-          <div class="listing__img"></div>
-          <div class="listing__body">
-            <div class="listing__title">Riad calme au centre</div>
-            <div class="listing__meta">Marrakech · Semaine</div>
-            <div class="listing__price">€65 / nuit</div>
-          </div>
-        </article>
-
-        <article class="listing">
-          <div class="listing__img"></div>
-          <div class="listing__body">
-            <div class="listing__title">Appartement vue mer</div>
-            <div class="listing__meta">Casablanca · Mois</div>
-            <div class="listing__price">€900 / mois</div>
-          </div>
-        </article>
-
-        <article class="listing">
-          <div class="listing__img"></div>
-          <div class="listing__body">
-            <div class="listing__title">Studio moderne</div>
-            <div class="listing__meta">Rabat · Nuit</div>
-            <div class="listing__price">€45 / nuit</div>
-          </div>
-        </article>
-      </section>
-
-      <!-- Map -->
-      <aside class="map">
-        <div class="map__placeholder">
-          Carte des logements
-        </div>
-      </aside>
-
+    <div class="card chat-card">
+      <h3>Messages</h3>
+      <div class="chat-box">
+        <p class="muted">Sélectionnez un logement pour discuter.</p>
+      </div>
     </div>
-  </main>
 
+  </aside>
+
+</main>
+
+<!-- Image preview modal -->
+<div id="modal" class="modal">
+  <img id="modalImg" />
+</div>
+
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script src="js/explore.js"></script>
 </body>
 </html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Ajouter un logement — Atlas Stay</title>
+
+  <link rel="stylesheet" href="css/styles.css" />
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+  />
+</head>
+
+<body class="page-bg">
+
+<header class="topbar">
+  <div class="logo">AS</div>
+  <nav>
+    <a href="index.html">Accueil</a>
+    <a href="explore.html">Explorer</a>
+  </nav>
+</header>
+
+<main class="container wide">
+
+  <h1 class="page-title">Ajouter un logement</h1>
+
+  <div class="listing-layout">
+
+    <!-- LEFT COLUMN -->
+    <form id="listingForm" class="card form-card">
+
+      <h2>Informations du logement</h2>
+
+      <label>Titre</label>
+      <input required name="title" placeholder="Riad moderne au centre" />
+
+      <label>Description</label>
+      <textarea name="description" rows="3"></textarea>
+
+      <label>Ville</label>
+      <input name="city" required />
+
+      <label>Adresse complète</label>
+      <input id="addressInput" name="address" required />
+
+      <label>Durée maximale (en nuits)</label>
+      <input type="number" name="maxNights" min="1" placeholder="ex: 45" />
+
+      <label>Prix par nuit (€)</label>
+      <input type="number" name="priceNight" />
+
+      <label>Images</label>
+      <input type="file" id="imageInput" multiple accept="image/*" />
+
+      <div id="imagePreview" class="image-preview"></div>
+
+      <button class="btn-primary">Publier le logement</button>
+      <p id="successMsg" class="success-msg"></p>
+
+    </form>
+
+    <!-- RIGHT COLUMN -->
+    <div class="card map-card">
+      <h2>Localisation</h2>
+      <div id="map"></div>
+    </div>
+
+  </div>
+</main>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="js/add-listing.js"></script>
+</body>
+</html>

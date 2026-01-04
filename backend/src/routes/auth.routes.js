@@ -1,8 +1,19 @@
-const express = require("express");
+import express from "express";
+
 const router = express.Router();
-const authController = require("../controllers/auth.controller");
 
-router.post("/register", authController.register);
-router.post("/login", authController.login);
+/* TEMP LOGIN (no DB yet) */
+router.post("/login", (req, res) => {
+  const { email, password } = req.body;
 
-module.exports = router;
+  if (email === "host@atlasstay.local" && password === "123456") {
+    return res.json({
+      token: "fake-jwt-token-for-now",
+      role: "host"
+    });
+  }
+
+  res.status(401).json({ error: "Invalid credentials" });
+});
+
+export default router;

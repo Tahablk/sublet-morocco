@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Logement — Atlas Stay</title>
+
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav__brand">
+    <div class="logo">AS</div>
+    <span>Atlas Stay</span>
+  </div>
+  <nav>
+    <a href="explore.html">Explorer</a>
+    <a href="wishlist.html">Wishlist</a>
+  </nav>
+</header>
+
+<main class="listing-layout">
+
+  <section class="card">
+    <div id="photos" class="photo-grid"></div>
+    <div id="info"></div>
+  </section>
+
+  <aside>
+    <div class="card">
+      <h3>Carte</h3>
+      <div id="map"></div>
+    </div>
+
+    <div class="card">
+      <h3>Chat</h3>
+      <p class="muted">Chat activé bientôt</p>
+    </div>
+  </aside>
+
+</main>
+
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script src="js/listing.js"></script>
+</body>
+</html>

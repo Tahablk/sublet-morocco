@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Espace hôte — Atlas Stay</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav__brand">
+    <div class="logo">AS</div>
+    <span>Atlas Stay</span>
+  </div>
+  <nav>
+    <a href="index.html">Accueil</a>
+    <a href="explore.html">Explorer</a>
+  </nav>
+</header>
+
+<main class="host-layout">
+
+  <!-- LEFT -->
+  <section class="card host-info">
+    <h3>Informations hôte</h3>
+    <input placeholder="Nom complet" />
+    <input placeholder="Email" />
+    <input placeholder="Téléphone" />
+
+    <label class="label">CIN / Passeport</label>
+    <label class="upload-btn">
+      + Ajouter document
+      <input type="file" accept="image/*,.pdf" hidden />
+    </label>
+  </section>
+
+  <!-- CENTER -->
+  <section class="card host-form">
+    <h2>Ajouter un logement</h2>
+
+    <input placeholder="Titre" id="title" />
+    <input placeholder="Adresse complète" id="address" />
+    <textarea placeholder="Description détaillée"></textarea>
+
+    <div class="grid-2">
+      <input placeholder="Ville" id="city" />
+      <input type="number" placeholder="Prix / nuit (€)" id="price" />
+    </div>
+
+    <input type="number" placeholder="Durée max (nuits)" id="nights" />
+
+    <label class="label">Photos du logement</label>
+    <label class="upload-btn">
+      + Ajouter des photos
+      <input type="file" id="images" multiple accept="image/*" hidden />
+    </label>
+
+    <button id="publish">Publier le logement</button>
+  </section>
+
+  <!-- MAP -->
+  <section class="card host-map">
+    <h3>Localisation</h3>
+    <div id="map"></div>
+  </section>
+
+  <!-- PHOTOS -->
+  <section class="card host-photos">
+    <h3>Aperçu des photos</h3>
+    <div id="preview" class="image-preview large"></div>
+  </section>
+
+  <!-- CHAT -->
+  <section class="card host-chat">
+    <h3>Messages</h3>
+    <div class="chat-box">Le chat arrive bientôt.</div>
+  </section>
+
+</main>
+
+<!-- IMAGE MODAL -->
+<div id="modal" class="modal">
+  <img id="modalImg" />
+</div>
+
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script src="js/host.js"></script>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Connexion — Atlas Stay</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Minimal reset (important) -->
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      background: #faf7f2;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+  </style>
+
+  <link rel="stylesheet" href="/css/styles.css" />
+</head>
+
+<body>
+
+  <!-- TRUE CENTERING -->
+  <main
+    style="
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    "
+  >
+    <section
+      style="
+        width: 100%;
+        max-width: 380px;
+        background: white;
+        padding: 36px;
+        border-radius: 18px;
+        box-shadow: 0 24px 48px rgba(0,0,0,0.06);
+      "
+    >
+      <h1 style="margin-bottom: 6px;">Connexion</h1>
+      <p style="margin-bottom: 28px; color:#555;">
+        Accédez à votre espace Atlas Stay
+      </p>
+
+      <form id="loginForm">
+        <div style="margin-bottom: 16px;">
+          <label style="display:block; margin-bottom:6px;">Email</label>
+          <input
+            id="email"
+            type="email"
+            required
+            style="width:100%; padding:12px 14px; border-radius:10px; border:1px solid #ddd;"
+          />
+        </div>
+
+        <div style="margin-bottom: 20px;">
+          <label style="display:block; margin-bottom:6px;">Mot de passe</label>
+          <input
+            id="password"
+            type="password"
+            required
+            style="width:100%; padding:12px 14px; border-radius:10px; border:1px solid #ddd;"
+          />
+        </div>
+
+        <div
+          id="error"
+          style="display:none; margin-bottom:14px; color:#b00020; font-size:14px;"
+        ></div>
+
+        <button
+          type="submit"
+          style="
+            width:100%;
+            padding:12px;
+            border-radius:12px;
+            border:none;
+            background:#0b1c2d;
+            color:white;
+            font-size:15px;
+            cursor:pointer;
+          "
+        >
+          Se connecter
+        </button>
+      </form>
+    </section>
+  </main>
+
+  <!-- IMPORTANT: JS at very end -->
+  <script src="/js/login.js"></script>
+</body>
+</html>
